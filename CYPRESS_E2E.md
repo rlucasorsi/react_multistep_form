@@ -32,7 +32,7 @@ npm run cy:run
 
 ## Configuration
 
-The tests use environment variables for some test data (like name and email). You should create a `cypress.env.json` file in the `multistep_react_form` directory:
+The tests use environment variables for some test data (like name and email). You should create a `cypress.env.json` file in the root directory:
 
 ```json
 {
@@ -56,7 +56,7 @@ These Page Objects are located in `cypress/support/pages/`.
 
 ## Covered Scenarios
 
-The main test file is [AvaliationForm.cy.js](file:///c:/Lucas%20Orsi/react_multistep_form/multistep_react_form/cypress/e2e/gui/form/AvaliationForm.cy.js). It covers the following scenarios:
+The main test file is [AvaliationForm.cy.js](file:///c:/Lucas%20Orsi/react_multistep_form/cypress/e2e/gui/form/AvaliationForm.cy.js). It covers the following scenarios:
 
 ### 1. Initial Page Load
 - Verifies title and description.
