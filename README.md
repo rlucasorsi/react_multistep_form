@@ -49,6 +49,17 @@ This project uses Cypress for End-to-End testing.
 - `npm run cy:open`: Open Cypress interactive runner.
 - `npm run cy:run`: Run tests in headless mode.
 
+## CI/CD
+
+This project uses **GitHub Actions** for automated End-to-End testing.
+
+- **CI Workflow**: Runs on every push or pull request to the `main` branch.
+- **Workflow Path**: [.github/workflows/ci.yaml](file:///c:/Lucas%20Orsi/react_multistep_form/.github/workflows/ci.yaml)
+
+### Automated Safety (Husky Pre-push Hook)
+
+We use **Husky** to manage Git hooks. A **pre-push hook** is configured to run E2E tests (`npm run cy:run`) locally before every `git push`. This ensures that failing code never reaches the repository.
+
 ## Architecture
 
 The project follows modern best practices, including a **Page Object Pattern (POM)** for E2E tests to ensure maintainability and readability.

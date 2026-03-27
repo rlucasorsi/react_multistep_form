@@ -44,6 +44,28 @@ The tests use environment variables for some test data (like name and email). Yo
 > [!NOTE]
 > `cypress.env.json` is ignored by Git to keep your local test data private.
 
+## CI (GitHub Actions)
+
+The tests are automatically run in GitHub Actions on every push to `main`.
+
+### Required Secrets
+
+To make the tests pass in CI, you must configure the following **GitHub Secrets** in your repository settings:
+
+- `CYPRESS_NAME`: The name to use during tests.
+- `CYPRESS_EMAIL`: The email to use during tests.
+
+## Local Safety: Husky Pre-push Hook
+
+To avoid pushing failing tests, a local **pre-push hook** (managed by **Husky**) is available. It will run the headless tests automatically when you try to `git push`.
+
+This hook is located in [.husky/pre-push](file:///c:/Lucas%20Orsi/react_multistep_form/.husky/pre-push).
+
+If you need to bypass this hook for any reason (not recommended), you can use:
+```bash
+git push --no-verify
+```
+
 ## Architecture: Page Object Pattern (POM)
 
 The test suite follows the **Page Object Pattern (POM)** to improve maintainability and readability. Each step of the form is encapsulated in its own Page Object class:
