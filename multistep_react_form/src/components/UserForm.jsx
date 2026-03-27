@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserForm = ({ data, updateFielHandler }) => {
   return (
-    <div>
+    <div data-cy="user-form">
       <div className="form-control">
         <label htmlFor="name">Nome</label>
         <input
@@ -13,6 +13,7 @@ const UserForm = ({ data, updateFielHandler }) => {
           required
           value={data.name || ''}
           onChange={(e) => updateFielHandler('name', e.target.value)}
+          data-cy="input-name"
         />
       </div>
       <div className="form-control">
@@ -20,11 +21,12 @@ const UserForm = ({ data, updateFielHandler }) => {
         <input
           type="email"
           name="email"
-          id="name"
+          id="email"
           placeholder="Digite o seu e-mail"
           required
           value={data.email || ''}
           onChange={(e) => updateFielHandler('email', e.target.value)}
+          data-cy="input-email"
         />
       </div>
     </div>

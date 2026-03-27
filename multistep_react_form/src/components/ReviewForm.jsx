@@ -9,9 +9,9 @@ import './ReviewForm.css';
 
 const ReviewForm = ({ data, updateFielHandler }) => {
   return (
-    <div className="review-form">
-      <div className="form-control score-container">
-        <label className="radio-container">
+    <div className="review-form" data-cy="review-form">
+      <div className="form-control score-container" data-cy="score-container">
+        <label className="radio-container" data-cy="radio-unsatisfied">
           <input
             type="radio"
             value="unsatisfied"
@@ -23,7 +23,7 @@ const ReviewForm = ({ data, updateFielHandler }) => {
           <BsFillEmojiFrownFill />
           <p>Insatisfeito</p>
         </label>
-        <label className="radio-container">
+        <label className="radio-container" data-cy="radio-neutral">
           <input
             type="radio"
             value="neutral"
@@ -35,7 +35,7 @@ const ReviewForm = ({ data, updateFielHandler }) => {
           <BsFillEmojiNeutralFill />
           <p>Poderia ser melhor</p>
         </label>
-        <label className="radio-container">
+        <label className="radio-container" data-cy="radio-satisfied">
           <input
             type="radio"
             value="satisfied"
@@ -47,7 +47,7 @@ const ReviewForm = ({ data, updateFielHandler }) => {
           <BsFillEmojiSmileFill />
           <p>Satisfeito</p>
         </label>
-        <label className="radio-container">
+        <label className="radio-container" data-cy="radio-very-satisfied">
           <input
             type="radio"
             value="very_satisfied"
@@ -69,6 +69,7 @@ const ReviewForm = ({ data, updateFielHandler }) => {
           required
           value={data.comment || ''}
           onChange={(e) => updateFielHandler('comment', e.target.value)}
+          data-cy="input-comment"
         ></textarea>
       </div>
     </div>

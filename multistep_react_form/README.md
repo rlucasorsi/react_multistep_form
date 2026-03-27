@@ -1,16 +1,56 @@
-# React + Vite
+# Multistep Evaluation Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern, responsive multistep form built with React and Vite. It allows users to provide feedback through a structured three-step process: Identification, Review, and Confirmation.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Multistep Flow**: Organized into 3 clear steps with a progress indicator.
+- **Form Validation**: Real-time validation for name and email.
+- **Responsive Design**: Works perfectly on mobile and desktop.
+- **State Management**: Preserves user input when navigating between steps.
+- **E2E Testing**: Comprehensive test suite with Cypress.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React
+- **Build Tool**: Vite
+- **Styling**: Local CSS (Modular approach)
+- **Icons**: React Icons
+- **Testing**: Cypress
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+## E2E Testing
+
+This project uses Cypress for End-to-End testing.
+
+- **Check the [Cypress E2E Guide](file:///c:/Lucas%20Orsi/react_multistep_form/multistep_react_form/CYPRESS_E2E.md)** for detailed instructions and test scenarios.
+
+### Quick Commands
+
+- `npm run cy:open`: Open Cypress interactive runner.
+- `npm run cy:run`: Run tests in headless mode.
+
+## Linting
+
+```bash
+npm run lint
+```

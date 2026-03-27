@@ -38,32 +38,32 @@ function App() {
     useForm(formComponents);
 
   return (
-    <div className="app">
-      <div className="header">
-        <h2>Deixe sua avaliação</h2>
-        <p>
+    <div className="app" data-cy="app">
+      <div className="header" data-cy="header">
+        <h2 data-cy="header-title">Deixe sua avaliação</h2>
+        <p data-cy="header-description">
           Ficamos felizes com a sua compra, utilize o formulário abaixo para
           avaliar o produto
         </p>
       </div>
-      <div className="form-container">
+      <div className="form-container" data-cy="form-container">
         <Steps currentStep={currentStep} />
-        <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
-          <div className="inputs-container">{currentComponent}</div>
-          <div className="actions">
+        <form onSubmit={(e) => changeStep(currentStep + 1, e)} data-cy="form">
+          <div className="inputs-container" data-cy="inputs-container">{currentComponent}</div>
+          <div className="actions" data-cy="actions">
             {!isFirstStep && (
-              <button type="button" onClick={() => changeStep(currentStep - 1)}>
+              <button type="button" onClick={() => changeStep(currentStep - 1)} data-cy="btn-back">
                 <GrFormPrevious />
                 <span>Voltar</span>
               </button>
             )}
             {!isLastStep ? (
-              <button type="submit">
+              <button type="submit" data-cy="btn-next">
                 <span>Avançar</span>
                 <GrFormNext />
               </button>
             ) : (
-              <button type="button">
+              <button type="button" data-cy="btn-submit">
                 <span>Enviar</span>
                 <FiSend />
               </button>
